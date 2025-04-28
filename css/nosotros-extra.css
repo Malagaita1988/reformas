@@ -1,0 +1,745 @@
+/* =============================
+   NOSOTROS - DISEÑO EXCLUSIVO
+   ============================= */
+
+/* Valores y Diferenciales - estilo exclusivo */
+.values.section {
+    background: #f8fbfd;
+    padding: 4rem 0 3rem 0;
+}
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.2rem;
+    margin-top: 2.5rem;
+}
+.value-card {
+    background: #fff;
+    border: 1.5px solid #eaf1f7;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(44,62,80,0.07);
+    padding: 2.2rem 1.3rem 2.5rem 1.3rem;
+    text-align: center;
+    transition: box-shadow 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 180px;
+}
+.value-card:hover {
+    box-shadow: 0 16px 48px rgba(36,113,163,0.13);
+    transform: translateY(-6px) scale(1.025);
+}
+.value-card i {
+    font-size: 3.2rem;
+    color: #2471a3;
+    margin-bottom: 1.2rem;
+}
+.value-card h3 {
+    font-size: 2rem;
+    color: #1a3556;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.5px;
+}
+.value-card p {
+    font-size: 1.3rem;
+    color: #444;
+    line-height: 1.5;
+    margin: 0;
+}
+@media (max-width: 700px) {
+    .values-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.1rem;
+    }
+    .value-card {
+        min-height: 220px;
+        padding: 1.2rem 0.6rem 1.5rem 0.6rem;
+    }
+    .value-card h3 {
+        font-size: 1.25rem;
+    }
+    .value-card i {
+        font-size: 2.2rem;
+    }
+    .value-card p {
+        font-size: 0.98rem;
+    }
+}
+@media (max-width: 480px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Centrado universal para h2 de secciones en Nosotros */
+.section h2 {
+    text-align: center !important;
+    color: #2c3e50 !important;
+}
+
+/* HERO NOSOTROS CUSTOM */
+.hero-nosotros-custom {
+    position: relative;
+    width: 100%;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 8.5rem; /* igual a header fijo */
+}
+.hero-nosotros-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 1;
+    background: linear-gradient(rgba(44,62,80,0.55), rgba(44,62,80,0.35)), url('/assets/img/hero_nosotros.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #2c3e50;
+}
+
+@media (min-width: 901px) {
+  .hero-nosotros-custom {
+    width: 100vw;
+    height: 540px;
+    min-height: 540px;
+    max-height: none;
+    margin-top: 8.5rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-nosotros-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 1;
+    background: linear-gradient(rgba(44,62,80,0.55), rgba(44,62,80,0.35)), url('/assets/img/hero_nosotros_pc.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 10%;
+    background-color: #222;
+  }
+}
+
+
+/* HERO NOSOTROS MÓVIL/TABLET: imagen llena ancho */
+@media (max-width: 900px) {
+  .hero-nosotros-bg {
+    background-size: cover;
+    background-position: center;
+    background-color: #2c3e50;
+  }
+  .hero-nosotros-content h1,
+  .about-story-content h1,
+  .about-future h1,
+  .about-lab h1,
+  .about-partners h1,
+  .about-awards h1,
+  .about-unique h1 {
+    font-size: 3.2rem;
+  }
+  .hero-nosotros-content h2,
+  .about-story-content h2,
+  .about-future h2,
+  .about-lab h2,
+  .about-partners h2,
+  .about-awards h2,
+  .about-unique h2 {
+    font-size: 2.2rem;
+  }
+  .hero-nosotros-content h3,
+  .about-story-content h3,
+  .about-future h3,
+  .about-lab h3,
+  .about-partners h3,
+  .about-awards h3,
+  .about-unique h3 {
+    font-size: 1.5rem;
+  }
+  .hero-nosotros-content p,
+  .about-story-content p,
+  .about-future p,
+  .about-lab p,
+  .about-partners p,
+  .about-awards p,
+  .about-unique p {
+    font-size: 1.2rem;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .hero-nosotros-content h1,
+  .about-story-content h1,
+  .about-future h1,
+  .about-lab h1,
+  .about-partners h1,
+  .about-awards h1,
+  .about-unique h1 {
+    font-size: 2.1rem;
+  }
+  .hero-nosotros-content h2,
+  .about-story-content h2,
+  .about-future h2,
+  .about-lab h2,
+  .about-partners h2,
+  .about-awards h2,
+  .about-unique h2 {
+    font-size: 1.6rem;
+  }
+  .hero-nosotros-content h3,
+  .about-story-content h3,
+  .about-future h3,
+  .about-lab h3,
+  .about-partners h3,
+  .about-awards h3,
+  .about-unique h3 {
+    font-size: 1.15rem;
+  }
+  .hero-nosotros-content p,
+  .about-story-content p,
+  .about-future p,
+  .about-lab p,
+  .about-partners p,
+  .about-awards p,
+  .about-unique p {
+    font-size: 1rem;
+  }
+}
+
+
+.hero-nosotros-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hero-nosotros-content h1,
+.about-story-content h1,
+.about-future h1,
+.about-lab h1,
+.about-partners h1,
+.about-awards h1,
+.about-unique h1 {
+    font-size: 4vw;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 2px 12px rgba(44,62,80,0.35);
+    margin-bottom: 1.5rem;
+    line-height: 1.07;
+    letter-spacing: 1px;
+}
+
+.hero-nosotros-content h2,
+.about-story-content h2,
+.about-future h2,
+.about-lab h2,
+.about-partners h2,
+.about-awards h2,
+.about-unique h2 {
+    text-align: center;
+    font-size: 3.8rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    color: #2c3e50;
+}
+
+.hero-nosotros-content h3,
+.about-story-content h3,
+.about-future h3,
+.about-lab h3,
+.about-partners h3,
+.about-awards h3,
+.about-unique h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #e67e22;
+}
+
+.hero-nosotros-content p,
+.about-story-content p,
+.about-future p,
+.about-lab p,
+.about-partners p,
+.about-awards p,
+.about-unique p {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 0 1px 8px rgba(44,62,80,0.25);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+.hero-nosotros-content p {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 0 1px 8px rgba(44,62,80,0.25);
+}
+
+@media (max-width: 900px) {
+    .hero-nosotros-custom {
+        min-height: 200px;
+        margin-top: 7.5rem;
+    }
+    .hero-nosotros-content {
+        padding: 2rem 0.5rem 1.5rem 0.5rem;
+    }
+    .hero-nosotros-content h1 {
+        font-size: 8vw;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+    }
+    .hero-nosotros-content p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-nosotros-custom {
+        min-height: 150px;
+        margin-top: 6.5rem;
+    }
+    .hero-nosotros-content h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+    }
+}
+
+
+.about-story.section {
+    background: linear-gradient(120deg, #eaf6fb 70%, #2471a3 100%);
+    padding: 4rem 0 3rem 0;
+}
+.about-story-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+.about-story-content h2 {
+    color: #e67e22;
+    font-size: 2.5rem;
+    font-family: var(--font-primary);
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+.about-story-content p {
+    font-size: 1.25rem;
+    color: #2c3e50;
+    line-height: 1.7;
+}
+
+.about-manifesto.section {
+    background: linear-gradient(120deg, #eaf6fb 70%, #d0e6f7 100%);
+    padding: 3rem 0 2rem 0;
+}
+.about-manifesto h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.about-manifesto blockquote {
+    background: #fff;
+    border-left: 6px solid #e67e22;
+    padding: 2rem;
+    color: #444;
+    font-style: italic;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 32px rgba(44,62,80,0.08);
+}
+
+.about-day.section {
+    background: linear-gradient(90deg, #eaf6fb 0%, #2471a3 100%);
+    padding: 3.5rem 0 2.5rem 0;
+}
+.about-day-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.about-day-block {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+    padding: 2rem 1.5rem;
+    min-width: 180px;
+    flex: 1 1 180px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.about-day-block:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(230,126,34,0.18);
+}
+.about-day-block h3 {
+    color: #e67e22;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-decalogue.section {
+    background: #f8fafc;
+    padding: 3rem 0 2rem 0;
+}
+.decalogue-list {
+    max-width: 700px;
+    margin: 0 auto;
+    padding-left: 14em;
+}
+.decalogue-list li {
+    font-size: 1.40rem;
+    color: #2c3e50;
+    margin-bottom: 0.7em;
+    position: relative;
+    padding-left: 1.5em;
+}
+.decalogue-list li:before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: #e67e22;
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+}
+
+.about-future.section {
+    background: linear-gradient(120deg, #eaf6fb 10%, #2471a3 90%);
+    padding: 3rem 0 2rem 0;
+    text-align: center;
+}
+.about-future h2 {
+    color: #2c3e50;
+}
+.about-future p {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 2rem;
+}
+
+.about-social.section {
+    background: linear-gradient(120deg, #eaf6fb 70%, #d0e6f7 100%);
+}
+
+.about-social.section h2 {
+    text-align: center !important;
+    color: #2c3e50 !important;
+
+    text-align: center;
+
+    padding: 3rem 0 2rem 0;
+}
+.social-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+.social-list li {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.06);
+    padding: 1.5rem 1rem;
+    color: #e67e22;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.about-lab.section {
+    background: #eaf6fb;
+    padding: 3rem 0 2rem 0;
+    text-align: center;
+}
+.about-lab h2 {
+    color: #e67e22;
+}
+.about-lab p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    color: #1a3556 !important;
+}
+
+.about-partners.section {
+    background: #eaf6fb;
+    padding: 3rem 0 2rem 0;
+    text-align: center;
+}
+.partners-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.partners-logos img {
+    max-height: 60px;
+    max-width: 160px;
+    filter: grayscale(60%) contrast(1.1);
+    opacity: 0.8;
+    transition: filter 0.2s, opacity 0.2s;
+}
+.partners-logos img:hover {
+    filter: grayscale(0%) contrast(1.2);
+    opacity: 1;
+}
+
+.about-awards.section {
+    background: linear-gradient(120deg, #eaf6fb 60%, #2471a3 100%);
+    padding: 3rem 0 2rem 0;
+}
+.awards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.award-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(44,62,80,0.09);
+    padding: 1.5rem 0.5rem;
+    text-align: center;
+    min-width: 180px;
+    flex: 1 1 180px;
+}
+.award-card img {
+    max-height: 50px;
+    margin-bottom: 0.3rem;
+}
+.award-card span {
+    color: #e67e22;
+    font-weight: 600;
+    font-size: 1.07rem;
+}
+
+.about-unique.section {
+    background: linear-gradient(120deg, #eaf6fb 70%, #d0e6f7 100%);
+    padding: 3.5rem 0 2.5rem 0;
+}
+.unique-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.unique-block {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.unique-block:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(230,126,34,0.18);
+}
+.unique-block i {
+    font-size: 2.2rem;
+    color: #e67e22;
+    margin-bottom: 0.7rem;
+}
+.unique-block h3 {
+    color: #2c3e50;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+.unique-block p {
+color: #666;
+font-size: 1.07rem;
+}
+
+/* Estilos responsive para móviles */
+@media (max-width: 768px) {
+/* Ajustes generales para todas las secciones */
+.about-story.section,
+.about-manifesto.section,
+.about-day.section,
+.about-decalogue.section,
+.about-future.section,
+.about-social.section,
+.about-lab.section,
+.about-partners.section,
+.about-awards.section,
+.about-unique.section {
+padding: 3rem 1rem 2rem;
+}
+
+/* Ajustes de contenedores */
+.about-story-content,
+.about-manifesto blockquote,
+.about-future p,
+.about-lab p,
+.decalogue-list,
+.social-list,
+.awards-grid,
+.unique-grid,
+.partners-logos {
+max-width: 100%;
+margin-left: 0;
+margin-right: 0;
+}
+
+/* Ajustes de títulos */
+.about-story-content h2,
+.about-manifesto h2,
+.about-day h2,
+.about-decalogue h2,
+.about-future h2,
+.about-social h2,
+.about-lab h2,
+.about-partners h2,
+.about-awards h2,
+.about-unique h2 {
+font-size: 1.8rem;
+margin-bottom: 1.2rem;
+text-align: center;
+}
+
+/* Ajustes de texto */
+.about-story-content p,
+.about-future p,
+.about-lab p {
+font-size: 1.5rem;
+line-height: 1.6;
+}
+
+/* Ajustes de bloques */
+.about-day-grid {
+gap: 1.5rem;
+}
+
+.about-day-block,
+.unique-block,
+.award-card {
+padding: 1.5rem;
+margin-bottom: 1rem;
+}
+
+.about-day-block h3 {
+font-size: 1.3rem;
+}
+
+/* Ajustes de listas */
+.decalogue-list {
+padding-left: 1rem;
+}
+
+.decalogue-list li {
+font-size: 1.05rem;
+margin-bottom: 1rem;
+padding-left: 1.8rem;
+}
+
+/* Ajustes de iconos */
+.unique-block i {
+font-size: 1.8rem;
+}
+
+/* Ajustes de imágenes */
+.award-card img {
+max-height: 45px;
+}
+
+/* Ajustes de citas */
+.about-manifesto blockquote {
+padding: 1.5rem;
+font-size: 1.1rem;
+}
+
+/* Ajustes de grids */
+.social-list {
+grid-template-columns: 1fr;
+gap: 1rem;
+}
+
+.social-list li {
+font-size: 1.8rem;
+padding: 1.2rem;
+}
+
+.unique-grid {
+grid-template-columns: 1fr;
+}
+
+.partners-logos {
+flex-direction: column;
+align-items: center;
+}
+
+.partners-logos img {
+max-width: 70%;
+margin-bottom: 2rem;
+}
+}
+
+/* Ajustes específicos para móviles muy pequeños */
+@media (max-width: 480px) {
+.about-story.section,
+.about-manifesto.section,
+.about-day.section,
+.about-decalogue.section,
+.about-future.section,
+.about-social.section,
+.about-lab.section,
+.about-partners.section,
+.about-awards.section,
+.about-unique.section {
+padding: 2.5rem 0.8rem 1.8rem;
+}
+
+.about-story-content h2,
+.about-manifesto h2,
+.about-day h2,
+.about-decalogue h2,
+.about-future h2,
+.about-social h2,
+.about-lab h2,
+.about-partners h2,
+.about-awards h2,
+.about-unique h2 {
+font-size: 2.5rem;
+}
+
+.about-day-block,
+.unique-block,
+.award-card {
+padding: 1.2rem 0.8rem;
+}
+
+.about-day-block h3 {
+font-size: 1.2rem;
+}
+
+.unique-block i {
+font-size: 1.6rem;
+}
+}

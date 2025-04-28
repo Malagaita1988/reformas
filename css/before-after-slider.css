@@ -1,0 +1,209 @@
+/**
+ * Estilos para el comparador antes/después
+ * Permite visualizar la transformación de los proyectos
+ */
+
+.before-after-container {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Altura ajustada para mostrar mejor las imágenes */
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.before-after-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.before-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    overflow: hidden;
+}
+
+/* Aseguramos que las imágenes ocupen todo el espacio disponible */
+.before-after-container > img,
+.before-image > img,
+.after-image > img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.after-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.comparison-slider {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: white;
+    z-index: 3;
+    cursor: ew-resize;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.5s ease;
+}
+
+.resizing .comparison-slider {
+    background-color: var(--color-secondary);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.slider-handle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: ew-resize;
+}
+
+.slider-handle:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.slider-handle::before, .slider-handle::after {
+    content: '';
+    position: absolute;
+    background-color: var(--color-primary);
+    transition: all 0.2s ease;
+}
+
+/* Creamos flechas horizontales para indicar dirección */
+.slider-handle::before {
+    width: 14px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slider-handle::after {
+    width: 2px;
+    height: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+/* Añadimos puntas de flecha */
+.slider-handle::before::after, .slider-handle::before::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 2px;
+    background-color: var(--color-primary);
+}
+
+/* Flecha izquierda */
+.slider-handle .arrow-left {
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    transform: translate(0, -50%) rotate(45deg);
+}
+
+/* Flecha derecha */
+.slider-handle .arrow-right {
+    position: absolute;
+    right: 25%;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--color-primary);
+    border-top: 2px solid var(--color-primary);
+    transform: translate(0, -50%) rotate(45deg);
+}
+
+.slider-handle:hover .arrow-left,
+.slider-handle:hover .arrow-right {
+    border-color: var(--color-secondary);
+}
+
+.before-label, .after-label {
+    position: absolute;
+    bottom: 20px;
+    padding: 5px 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    z-index: 4;
+    transition: opacity 0.3s ease;
+}
+
+.before-label {
+    left: 20px;
+}
+
+.after-label {
+    right: 20px;
+}
+
+.resizing .before-label, .resizing .after-label {
+    opacity: 0 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .before-after-container {
+        height: 400px; /* Altura ajustada para tablets */
+    }
+    
+    .slider-handle {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .before-after-container {
+        height: 320px; /* Altura ajustada para móviles */
+    }
+    
+    .before-label, .after-label {
+        font-size: 0.8rem;
+        padding: 4px 10px;
+    }
+}
+.before-after-container,
+.comparison-slider,
+.slider-handle {
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+    user-select: none;
+    backface-visibility: hidden;
+    will-change: clip-path, transform;
+}
