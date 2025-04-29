@@ -1,11 +1,11 @@
-x/*
+/*
  * SERVICIOS-EXTRA.CSS
  * Mejoras visuales para la sección de servicios
  * Reformas Donosti
  */
 
 .services.section {
-    background: var(--color-light);
+    background: url('../assets/img/hero_servicios.png');
     padding: var(--spacing-lg) 0;
 }
 
