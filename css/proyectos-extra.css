@@ -5,7 +5,7 @@
 
 /* Hero específico de proyectos */
 .proyectos-hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/img/projects/hero_proyectos.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/img/projects/hero_proyectos.png');
     background-position: center;
     background-size: cover;
 }
