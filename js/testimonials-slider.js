@@ -4,182 +4,116 @@
  * Incluye autoplay, controles de navegación y transiciones elegantes
  */
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Inicializar el carrusel de testimonios
-    initTestimonialsCarousel();
+document.addEventListener('DOMContentLoaded', function() {
+    // Seleccionar elementos del DOM
+    const testimonials = document.querySelectorAll('.testimonial');
+    const prevButton = document.querySelector('.prev-testimonial');
+    const nextButton = document.querySelector('.next-testimonial');
+    const indicators = document.querySelectorAll('.testimonial-indicators .indicator');
     
-    // Inicializar animaciones para tarjetas de testimonios (si existen)
-    initTestimonialCards();
+    // Variables de control
+    let currentIndex = 0;
+    let autoplayTimer = null;
     
-    /**
-     * Inicializa el carrusel principal de testimonios con navegación y autoplay
-     */
-    function initTestimonialsCarousel() {
-        const testimonials = document.querySelectorAll('.testimonial');
-        const prevButton = document.querySelector('.prev-testimonial');
-        const nextButton = document.querySelector('.next-testimonial');
-        
-        if (!testimonials.length || !prevButton || !nextButton) {
-            console.log('No se encontraron elementos necesarios para el carrusel de testimonios');
-            return;
-        }
-        
-        console.log('Inicializando carrusel de testimonios');
-        
-        let currentIndex = 0;
-        let autoplayInterval;
-        
-        // Asegurarse de que todos los testimonios estén configurados correctamente
-        testimonials.forEach((testimonial, index) => {
-            if (index === 0) {
-                testimonial.style.display = 'block';
-            } else {
-                testimonial.style.display = 'none';
-            }
+    // Verificar que existan testimonios
+    if (testimonials.length === 0) {
+        console.error('No se encontraron testimonios');
+        return;
+    }
+    
+    console.log('Inicializando slider de testimonios con ' + testimonials.length + ' elementos');
+    
+    // Función para mostrar un testimonio específico
+    function showTestimonial(index) {
+        // Ocultar todos los testimonios
+        testimonials.forEach(testimonial => {
             testimonial.classList.remove('active');
         });
         
-        // Mostrar el primer testimonio y marcarlo como activo
-        testimonials[0].style.display = 'block';
-        setTimeout(() => {
-            testimonials[0].classList.add('active');
-        }, 50);
+        // Mostrar el testimonio seleccionado
+        testimonials[index].classList.add('active');
         
-        // Función para mostrar un testimonio específico
-        function showTestimonial(index) {
-            // Evitar operaciones innecesarias si ya estamos en el testimonio actual
-            if (currentIndex === index) return;
-            
-            // Marcar el índice actual para referencia
-            currentIndex = index;
-            
-            // Guardar referencia al testimonio actual y anterior
-            const currentTestimonial = testimonials[index];
-            
-            // Primero, ocultar todos los testimonios excepto el actual
-            testimonials.forEach((testimonial, i) => {
-                if (i !== index) {
-                    // Quitar clase active para iniciar la transición de salida
-                    testimonial.classList.remove('active');
-                    
-                    // Ocultar después de que termine la transición
-                    setTimeout(() => {
-                        testimonial.style.display = 'none';
-                    }, 500);
-                }
-            });
-            
-            // Mostrar el testimonio actual inmediatamente (pero aún invisible)
-            currentTestimonial.style.display = 'block';
-            
-            // Forzar un reflow para asegurar que el navegador procese el cambio de display
-            void currentTestimonial.offsetWidth;
-            
-            // Añadir la clase active para iniciar la transición de entrada
-            setTimeout(() => {
-                currentTestimonial.classList.add('active');
-            }, 50);
-        }
-        
-        // Función para ir al testimonio anterior
-        function goToPrevTestimonial() {
-            currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-            showTestimonial(currentIndex);
-            resetAutoplay();
-        }
-        
-        // Función para ir al testimonio siguiente
-        function goToNextTestimonial() {
-            currentIndex = (currentIndex + 1) % testimonials.length;
-            showTestimonial(currentIndex);
-            resetAutoplay();
-        }
-        
-        // Resetear el autoplay
-        function resetAutoplay() {
-            clearInterval(autoplayInterval);
-            // Añadir un pequeño retraso antes de reiniciar el autoplay para evitar conflictos
-            setTimeout(() => {
-                startAutoplay();
-            }, 100);
-        }
-        
-        // Iniciar autoplay
-        function startAutoplay() {
-            autoplayInterval = setInterval(goToNextTestimonial, 8000);
-        }
-        
-        // Ya no necesitamos estos eventos porque los hemos reemplazado con los nuevos manejadores de eventos
-        // que incluyen la gestión del autoplay
-        /*
-        prevButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            goToPrevTestimonial();
+        // Actualizar los indicadores
+        indicators.forEach((indicator, i) => {
+            if (i === index) {
+                indicator.classList.add('is-active');
+                indicator.classList.add('active');
+            } else {
+                indicator.classList.remove('is-active');
+                indicator.classList.remove('active');
+            }
         });
         
-        nextButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            goToNextTestimonial();
-        });
-        */
-        
-        // Iniciar autoplay
-        startAutoplay();
-        
-        // Detener el autoplay cuando el usuario interactúa con los botones
-        const stopAutoplay = () => {
-            clearInterval(autoplayInterval);
-        };
-        
-        // Mejorar la gestión de eventos para los botones de navegación
-        prevButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            stopAutoplay();
-            goToPrevTestimonial();
-            // Reiniciar el autoplay después de 5 segundos de inactividad
-            setTimeout(() => {
-                startAutoplay();
-            }, 5000);
-        });
-        
-        nextButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            stopAutoplay();
-            goToNextTestimonial();
-            // Reiniciar el autoplay después de 5 segundos de inactividad
-            setTimeout(() => {
-                startAutoplay();
-            }, 5000);
-        });
-        
-        // Ya no necesitamos esta línea porque ya inicializamos el primer testimonio arriba
-        // testimonials[0].classList.add('active');
+        // Actualizar el índice actual
+        currentIndex = index;
     }
     
-    /**
-     * Inicializa animaciones para tarjetas de testimonios individuales
-     * (Funcionalidad original del archivo)
-     */
-    function initTestimonialCards() {
-        const testimonialCards = document.querySelectorAll('.testimonial-card');
-        
-        if (!testimonialCards.length) return;
-        
-        // Configurar estilos iniciales
-        testimonialCards.forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'all 0.5s ease';
-        });
-        
-        // Añadir animación de entrada a las tarjetas de testimonios
-        testimonialCards.forEach((card, index) => {
-            // Aplicar un retraso escalonado para crear efecto de cascada
-            setTimeout(() => {
-                // Añadir clase para animar la entrada
-                card.style.opacity = '1';
-                card.style.transform = 'translateY(0)';
-            }, 200 * index); // Incrementar el retraso para cada tarjeta
+    // Función para ir al testimonio anterior
+    function prevTestimonial() {
+        let newIndex = currentIndex - 1;
+        if (newIndex < 0) {
+            newIndex = testimonials.length - 1;
+        }
+        showTestimonial(newIndex);
+        resetAutoplay();
+    }
+    
+    // Función para ir al testimonio siguiente
+    function nextTestimonial() {
+        let newIndex = currentIndex + 1;
+        if (newIndex >= testimonials.length) {
+            newIndex = 0;
+        }
+        showTestimonial(newIndex);
+        resetAutoplay();
+    }
+    
+    // Iniciar el autoplay
+    function startAutoplay() {
+        stopAutoplay(); // Detener cualquier autoplay existente primero
+        autoplayTimer = setInterval(function() {
+            nextTestimonial();
+        }, 5000);
+    }
+    
+    // Detener el autoplay
+    function stopAutoplay() {
+        if (autoplayTimer) {
+            clearInterval(autoplayTimer);
+            autoplayTimer = null;
+        }
+    }
+    
+    // Reiniciar el autoplay
+    function resetAutoplay() {
+        stopAutoplay();
+        startAutoplay();
+    }
+    
+    // Configurar eventos para los botones de navegación
+    if (prevButton) {
+        prevButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            prevTestimonial();
         });
     }
+    
+    if (nextButton) {
+        nextButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            nextTestimonial();
+        });
+    }
+    
+    // Configurar eventos para los indicadores
+    indicators.forEach(function(indicator, index) {
+        indicator.addEventListener('click', function() {
+            showTestimonial(index);
+            resetAutoplay();
+        });
+    });
+    
+    // Mostrar el primer testimonio e iniciar el autoplay
+    showTestimonial(0);
+    startAutoplay();
 });

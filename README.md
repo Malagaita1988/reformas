@@ -2,7 +2,7 @@
 
 ## Descripción General
 
-Reformas Donosti es un sitio web profesional para una empresa de reformas integrales ubicada en San Sebastián (Donostia). El sitio está diseñado para mostrar los servicios de la empresa, proyectos realizados, facilitar el contacto con clientes potenciales y proporcionar una herramienta de cálculo de presupuestos.
+Reformas Donosti es un sitio web profesional para una empresa (ficticiad)e reformas integrales ubicada en San Sebastián (Donostia). El sitio está diseñado para mostrar los servicios de la empresa, proyectos realizados, facilitar el contacto con clientes potenciales y proporcionar una herramienta de cálculo de presupuestos.
 
 ## Estructura del Proyecto y Diseño
 
