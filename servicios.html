@@ -8,20 +8,19 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/components.css">
-<link rel="stylesheet" href="css/servicios-extra.css">
     <link rel="stylesheet" href="css/sections.css">
-    <link rel="stylesheet" href="css/project-cards.css">
+    <link rel="stylesheet" href="css/proyectos-extra.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
 </head>
-<body>
+<body class="servicios-page">
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/img/logo_1.png" alt="Reformas Donosti" width="220" height="60">
+                    <img src="./assets/img/logo_1.png" alt="Reformas Donosti" width="220" height="60">
                 </a>
             </div>
             <nav class="main-nav">
@@ -60,36 +59,90 @@
                 <p>Descubre nuestros principales servicios de reforma y mejora del hogar</p>
             </div>
             <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-home"></i>
-                    <h3>Reformas Integrales</h3>
-                    <p>Transformamos tu vivienda de principio a fin, gestionando todos los gremios y detalles para que no tengas que preocuparte por nada.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-utensils"></i>
-                    <h3>Reformas de Cocinas</h3>
-                    <p>Renueva tu cocina con diseño moderno, funcionalidad y los mejores materiales. Adaptamos el espacio a tus necesidades.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-bath"></i>
-                    <h3>Reformas de Baños</h3>
-                    <p>Baños a medida, accesibles y con acabados de calidad. Soluciones de fontanería, alicatado y mobiliario.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-paint-roller"></i>
-                    <h3>Pintura y Acabados</h3>
-                    <p>Trabajos de pintura profesional, papel pintado, microcemento y acabados decorativos para dar vida a tus espacios.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-couch"></i>
-                    <h3>Carpintería y Mobiliario</h3>
-                    <p>Muebles a medida, puertas, armarios y soluciones de carpintería para optimizar cada rincón de tu hogar.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-bolt"></i>
-                    <h3>Electricidad y Fontanería</h3>
-                    <p>Instalaciones eléctricas y de fontanería seguras y eficientes, cumpliendo todas las normativas actuales.</p>
-                </div>
+    <div class="service-flip-card-container">
+      <div class="service-flip-card">
+        <div class="front">
+          <i class="fas fa-home"></i>
+          <p class="front-heading">Reformas Integrales</p>
+          <p>Transformamos tu vivienda de principio a fin, gestionando todos los gremios y detalles para que no tengas que preocuparte por nada.</p>
+        </div>
+        <div class="back">
+          <p class="back-heading">Reformas Integrales</p>
+          <p>¡Solicita tu presupuesto sin compromiso!</p>
+          <a href="contacto.html">Contactar</a>
+        </div>
+      </div>
+    </div>
+    <div class="service-flip-card-container">
+      <div class="service-flip-card">
+        <div class="front">
+          <i class="fas fa-utensils"></i>
+          <p class="front-heading">Reformas de Cocinas</p>
+          <p>Renueva tu cocina con diseño moderno, funcionalidad y los mejores materiales. Adaptamos el espacio a tus necesidades.</p>
+        </div>
+        <div class="back">
+          <p class="back-heading">Reformas de Cocinas</p>
+          <p>¡Convierte tu cocina en el corazón del hogar!</p>
+          <a href="contacto.html">Contactar</a>
+        </div>
+      </div>
+    </div>
+    <div class="service-flip-card-container">
+      <div class="service-flip-card">
+        <div class="front">
+          <i class="fas fa-bath"></i>
+          <p class="front-heading">Reformas de Baños</p>
+          <p>Baños a medida, accesibles y con acabados de calidad. Soluciones de fontanería, alicatado y mobiliario.</p>
+        </div>
+        <div class="back">
+          <p class="back-heading">Reformas de Baños</p>
+          <p>¡Disfruta de un baño moderno y funcional!</p>
+          <a href="contacto.html">Contactar</a>
+        </div>
+      </div>
+    </div>
+    <div class="service-flip-card-container">
+      <div class="service-flip-card">
+        <div class="front">
+          <i class="fas fa-paint-roller"></i>
+          <p class="front-heading">Pintura y Acabados</p>
+          <p>Trabajos de pintura profesional, papel pintado, microcemento y acabados decorativos para dar vida a tus espacios.</p>
+        </div>
+        <div class="back">
+          <p class="back-heading">Pintura y Acabados</p>
+          <p>¡Dale color y estilo a tu hogar!</p>
+          <a href="contacto.html">Contactar</a>
+        </div>
+      </div>
+    </div>
+                <div class="service-flip-card-container">
+  <div class="service-flip-card">
+    <div class="front">
+      <i class="fas fa-couch"></i>
+      <p class="front-heading">Carpintería y Mobiliario</p>
+      <p>Muebles a medida, puertas, armarios y soluciones de carpintería para optimizar cada rincón de tu hogar.</p>
+    </div>
+    <div class="back">
+      <p class="back-heading">Carpintería y Mobiliario</p>
+      <p>¡Personaliza tu espacio con muebles únicos!</p>
+      <a href="contacto.html">Contactar</a>
+    </div>
+  </div>
+</div>
+<div class="service-flip-card-container">
+  <div class="service-flip-card">
+    <div class="front">
+      <i class="fas fa-bolt"></i>
+      <p class="front-heading">Electricidad y Fontanería</p>
+      <p>Instalaciones eléctricas y de fontanería seguras y eficientes, cumpliendo todas las normativas actuales.</p>
+    </div>
+    <div class="back">
+      <p class="back-heading">Electricidad y Fontanería</p>
+      <p>¡Confía en profesionales para tu seguridad!</p>
+      <a href="contacto.html">Contactar</a>
+    </div>
+  </div>
+</div>
             </div>
         </div>
     </section>
@@ -112,7 +165,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <img src="assets/img/logo_1.png" alt="Reformas Donosti">
+                        <img src="./assets/img/logo_1.png" alt="Reformas Donosti">
                     </div>
                     <address>
                         <p><i class="fas fa-map-marker-alt"></i> Calle Urbieta 38, Bajo</p>

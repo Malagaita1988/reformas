@@ -20,6 +20,7 @@
     
     <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!-- Estilos -->
     <link rel="stylesheet" href="css/normalize.css">
@@ -27,10 +28,9 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/sections.css">
     <link rel="stylesheet" href="css/before-after-slider.css">
-    <link rel="stylesheet" href="css/project-cards.css">
+    <link rel="stylesheet" href="css/proyectos-extra.css">
     <link rel="stylesheet" href="css/calculator.css">
     <link rel="stylesheet" href="css/testimonials.css">
-    <link rel="stylesheet" href="css/index-testimonials.css">
     <link rel="stylesheet" href="css/footer.css">
     
     <!-- Open Graph para redes sociales -->
@@ -40,13 +40,13 @@
     <meta property="og:url" content="https://www.reformasdonosti.com">
     <meta property="og:type" content="website">
 </head>
-<body>
+<body class="home">
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/img/logo_1.png" alt="Reformas Donosti" width="220" height="60">
+                    <img src="./assets/img/logo_1.png" alt="Reformas Donosti" width="220" height="60">
                 </a>
             </div>
             <nav class="main-nav">
@@ -71,7 +71,7 @@
     <section class="hero">
         <div class="hero-video">
             <video autoplay muted loop playsinline>
-                <source src="assets/img/hero_video.mp4" type="video/mp4">
+                <source src="./assets/img/hero_video.mp4" type="video/mp4">
             </video>
             <div class="overlay"></div>
         </div>
@@ -91,7 +91,7 @@
             </div>
             <div class="about-content">
                 <div class="about-image">
-                    <img src="assets/img/sobre_nbosotros.png" alt="Equipo de Reformas Donosti">
+                    <img src="./assets/img/sobre_nbosotros.png" alt="Equipo de Reformas Donosti">
                 </div>
                 <div class="about-text">
                     <h3>Expertos en reformas con pasión por el detalle</h3>
@@ -113,7 +113,7 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="assets/img/icons/reforma-integral.svg" alt="Reformas Integrales">
+                        <img src="./assets/img/icons/reforma-integral.svg" alt="Reformas Integrales">
                     </div>
                     <h3>Reformas Integrales</h3>
                     <p>Transformamos completamente tu espacio, desde el diseño inicial hasta los últimos detalles, coordinando todos los gremios necesarios.</p>
@@ -121,7 +121,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="assets/img/icons/cocina-bano.svg" alt="Cocinas y Baños">
+                        <img src="./assets/img/icons/cocina-bano.svg" alt="Cocinas y Baños">
                     </div>
                     <h3>Cocinas y Baños a Medida</h3>
                     <p>Diseñamos y fabricamos cocinas y baños personalizados, optimizando cada centímetro con soluciones funcionales y estéticas.</p>
@@ -129,7 +129,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="assets/img/icons/carpinteria.svg" alt="Revestimientos y Carpintería">
+                        <img src="./assets/img/icons/carpinteria.svg" alt="Revestimientos y Carpintería">
                     </div>
                     <h3>Revestimientos y Carpintería</h3>
                     <p>Trabajamos con maderas nobles y materiales innovadores para crear revestimientos, armarios y elementos de carpintería únicos.</p>
@@ -148,11 +148,11 @@
             </div>
             <div class="projects-carousel">
                 <!-- Proyecto 1: Parte Vieja -->
-                <div class="project-card">
+                <div class="project-card visible">
                     <div class="before-after-container">
-                        <img src="assets/img/projects/partevieja_despues.png" alt="Después - Reforma Parte Vieja">
+                        <img src="./assets/img/projects/partevieja_despues.png" alt="Después - Reforma Parte Vieja">
                         <div class="before-image">
-                            <img src="assets/img/projects/partevieja_antes.png" alt="Antes - Reforma Parte Vieja">
+                            <img src="./assets/img/projects/partevieja_antes.png" alt="Antes - Reforma Parte Vieja">
                         </div>
                         <div class="comparison-slider">
                             <div class="slider-handle"></div>
@@ -168,11 +168,11 @@
                 </div>
 
                 <!-- Proyecto 2: Cocina Moderna -->
-                <div class="project-card">
+                <div class="project-card visible">
                     <div class="before-after-container">
-                        <img src="assets/img/projects/cocina_despues.png" alt="Después - Cocina Moderna Gros">
+                        <img src="./assets/img/projects/cocina_despues.png" alt="Después - Cocina Moderna Gros">
                         <div class="before-image">
-                            <img src="assets/img/projects/cocina_antes.png" alt="Antes - Cocina Moderna Gros">
+                            <img src="./assets/img/projects/cocina_antes.png" alt="Antes - Cocina Moderna Gros">
                         </div>
                         <div class="comparison-slider">
                             <div class="slider-handle"></div>
@@ -188,11 +188,11 @@
                 </div>
 
                 <!-- Proyecto 3: Baño de Lujo -->
-                <div class="project-card">
+                <div class="project-card visible">
                     <div class="before-after-container">
-                        <img src="assets/img/projects/gros_despues.png" alt="Después - Baño de Lujo Moderno">
+                        <img src="./assets/img/projects/gros_despues.png" alt="Después - Baño de Lujo Moderno">
                         <div class="before-image">
-                            <img src="assets/img/projects/gros_antes.png" alt="Antes - Baño de Lujo Antiguo">
+                            <img src="./assets/img/projects/gros_antes.png" alt="Antes - Baño de Lujo Antiguo">
                         </div>
                         <div class="comparison-slider">
                             <div class="slider-handle"></div>
@@ -307,10 +307,60 @@
                 </form>
                 <div class="calculator-result" id="calculator-result">
                     <div class="result-content">
-                        <h3>Presupuesto estimado</h3>
-                        <p class="estimate">0 €</p>
-                        <p class="disclaimer">Este es un cálculo aproximado. Para un presupuesto detallado, contacta con nosotros.</p>
-                        <a href="contacto.html#contact-form" class="btn btn-primary">Solicitar presupuesto detallado</a>
+                        <div class="result-header">
+                            <h3>Presupuesto estimado</h3>
+                            <p class="estimate">0 €</p>
+                        </div>
+                        
+                        <div class="result-details">
+                            <div class="result-summary">
+                                <h4>Resumen del proyecto</h4>
+                                <ul class="project-summary">
+                                    <li><strong>Tipo de reforma:</strong> <span id="summary-type">-</span></li>
+                                    <li><strong>Superficie:</strong> <span id="summary-area">-</span> m²</li>
+                                    <li><strong>Calidad:</strong> <span id="summary-quality">-</span></li>
+                                    <li><strong>Tiempo estimado:</strong> <span id="summary-time">-</span></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="cost-breakdown">
+                                <h4>Desglose de costes</h4>
+                                <div class="cost-item">
+                                    <span>Materiales</span>
+                                    <span id="cost-materials">0 €</span>
+                                </div>
+                                <div class="cost-item">
+                                    <span>Mano de obra</span>
+                                    <span id="cost-labor">0 €</span>
+                                </div>
+                                <div class="cost-item">
+                                    <span>Instalaciones</span>
+                                    <span id="cost-installations">0 €</span>
+                                </div>
+                                <div class="cost-item total">
+                                    <span>Total (IVA incluido)</span>
+                                    <span id="cost-total">0 €</span>
+                                </div>
+                            </div>
+                            
+                            <div class="included-services">
+                                <h4>Servicios incluidos</h4>
+                                <ul id="services-list">
+                                    <li>Gestión integral del proyecto</li>
+                                    <li>Coordinación de gremios</li>
+                                    <li>Limpieza final de obra</li>
+                                    <li>Certificados de calidad</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="result-footer">
+                            <p class="disclaimer">Este es un cálculo aproximado basado en los datos proporcionados. Para un presupuesto detallado y personalizado, contacta con nuestro equipo.</p>
+                            <div class="result-actions">
+                                <a href="contacto.html#contact-form" class="btn btn-primary">Solicitar presupuesto detallado</a>
+                                <button id="recalculate-btn" class="btn btn-outline">Recalcular</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -336,75 +386,112 @@
                 <p>Experiencias reales de quienes confiaron en nosotros</p>
             </div>
             <div class="testimonials-slider">
+                <!-- Botones de navegaciu00f3n -->
+                <div class="testimonial-nav">
+                    <button class="testimonial-nav-btn prev-testimonial" aria-label="Testimonio anterior">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button class="testimonial-nav-btn next-testimonial" aria-label="Testimonio siguiente">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+                
                 <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>La reforma de nuestra cocina superó todas nuestras expectativas. El equipo fue profesional, puntual y el resultado es espectacular. Recomiendo totalmente sus servicios a cualquiera que busque calidad y profesionalidad."</p>
+                    <div class="testimonial-background">
+                        <img src="./assets/img/projects/cocina_moderna.png" alt="Cocina Moderna">
                     </div>
-                    <div class="testimonial-author">
-                        <div class="author-details">
-                            <img src="assets/img/maria_etxeberria.png" alt="María Echeverría">
-                            <div>
-                                <h4>María Echeverría</h4>
-                                <p>Reforma de cocina en Gros</p>
+                    <div class="testimonial-overlay">
+                        <div class="testimonial-header">
+                            <div class="author-details">
+                                <img src="./assets/img/maria_etxeberria.png" alt="María Echeverría">
+                                <div>
+                                    <h4>María Echeverría</h4>
+                                    <p>Reforma de cocina en Gros</p>
+                                    <span class="testimonial-date">Marzo 2025</span>
+                                </div>
+                            </div>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
                         </div>
-                        <div class="testimonial-project">
-                            <img src="assets/img/projects/cocina_moderna.png" alt="Cocina Moderna">
+                        <div class="testimonial-content">
+                            <p>"Reformas Donosti transformó nuestra cocina antigua en un espacio moderno y funcional que ahora es el corazón de nuestro hogar. Su atención al detalle y compromiso con la calidad fueron excepcionales. El equipo fue puntual, limpio y profesional durante todo el proceso. El resultado final superó todas nuestras expectativas."</p>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Segundo testimonio -->
-                <div class="testimonial" style="display: none;">
-                    <div class="testimonial-content">
-                        <p>Reformas Donosti transformó nuestro baño antiguo en un espacio moderno y funcional. Cumplieron con los plazos y el presupuesto acordado. El resultado final superó nuestras expectativas y ahora disfrutamos de un baño completamente renovado."</p>
+                <div class="testimonial">
+                    <div class="testimonial-background">
+                        <img src="./assets/img/projects/gros_despues.png" alt="Baño Moderno">
                     </div>
-                    <div class="testimonial-author">
-                        <div class="author-details">
-                            <img src="assets/img/jon_aramburu.png" alt="Jon Aramburu">
-                            <div>
-                                <h4>Jon Aramburu</h4>
-                                <p>Reforma de baño en Antiguo</p>
+                    <div class="testimonial-overlay">
+                        <div class="testimonial-header">
+                            <div class="author-details">
+                                <img src="./assets/img/jon_aramburu.png" alt="Jon Aramburu">
+                                <div>
+                                    <h4>Jon Aramburu</h4>
+                                    <p>Reforma de baño en Antiguo</p>
+                                    <span class="testimonial-date">Enero 2025</span>
+                                </div>
+                            </div>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
                             </div>
                         </div>
-                        <div class="testimonial-project">
-                            <img src="assets/img/projects/gros_despues.png" alt="Baño Moderno">
+                        <div class="testimonial-content">
+                            <p>"Decidimos renovar nuestro baño principal con Reformas Donosti y fue una experiencia excepcional. Desde la planificación inicial hasta la ejecución final, todo el proceso fue impecable. Nos impresionó especialmente su capacidad para maximizar el espacio y crear un diseño elegante y funcional. Cumplieron con el presupuesto y los plazos acordados, y el resultado es un baño de lujo que parece sacado de una revista."</p>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Tercer testimonio -->
-                <div class="testimonial" style="display: none;">
-                    <div class="testimonial-content">
-                        <p>Contratamos a Reformas Donosti para una reforma integral de nuestro apartamento en la Parte Vieja. El resultado es increíble, respetaron todos los elementos originales que queríamos conservar mientras modernizaron el espacio. La atención al detalle y el acabado final nos han dejado completamente satisfechos."</p>
+                <div class="testimonial">
+                    <div class="testimonial-background">
+                        <img src="./assets/img/projects/partevieja_despues.png" alt="Apartamento Reformado">
                     </div>
-                    <div class="testimonial-author">
-                        <div class="author-details">
-                            <img src="assets/img/miren_lopez.png" alt="Miren López">
-                            <div>
-                                <h4>Miren López</h4>
-                                <p>Reforma integral en Parte Vieja</p>
+                    <div class="testimonial-overlay">
+                        <div class="testimonial-header">
+                            <div class="author-details">
+                                <img src="./assets/img/miren_lopez.png" alt="Miren López">
+                                <div>
+                                    <h4>Miren López</h4>
+                                    <p>Reforma integral en Parte Vieja</p>
+                                    <span class="testimonial-date">Febrero 2025</span>
+                                </div>
+                            </div>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
                         </div>
-                        <div class="testimonial-project">
-                            <img src="assets/img/projects/partevieja_despues.png" alt="Apartamento Reformado">
+                        <div class="testimonial-content">
+                            <p>"Nuestra reforma integral en un piso de la Parte Vieja presentaba muchos desafíos debido a la antigüedad del edificio y sus características únicas. El equipo de Reformas Donosti demostró un profundo respeto por la arquitectura original mientras incorporaba elementos modernos con maestría. Su conocimiento técnico y sensibilidad estética fueron fundamentales para lograr el equilibrio perfecto entre lo clásico y lo contemporáneo."</p>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Navegación de testimonios -->
-            <div class="testimonial-nav">
-                <button class="testimonial-nav-btn prev-testimonial" aria-label="Testimonio anterior">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="15 18 9 12 15 6"></polyline>
-                    </svg>
-                </button>
-                <button class="testimonial-nav-btn next-testimonial" aria-label="Testimonio siguiente">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                </button>
+            <!-- Indicadores de paginación -->
+            <div class="testimonial-indicators">
+                <span class="indicator active is-active" data-index="0"></span>
+                <span class="indicator" data-index="1"></span>
+                <span class="indicator" data-index="2"></span>
             </div>
         </div>
     </section>
@@ -419,8 +506,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
     <footer class="footer">
         <div class="container footer-content">
             <!-- Forma decorativa superior -->
@@ -429,7 +514,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <img src="assets/img/logo_1.png" alt="Reformas Donosti">
+                        <img src="./assets/img/logo_1.png" alt="Reformas Donosti">
                     </div>
                     <address>
                         <p><i class="fas fa-map-marker-alt"></i> Calle Urbieta 38, Bajo</p>
@@ -513,6 +598,8 @@
     <script src="js/before-after-slider.js"></script>
     <script src="js/main.js"></script>
     <script src="js/chatbot.js"></script>
+    <script src="js/testimonials-slider.js"></script>
+    <script src="js/calculator.js"></script>
 </body>
 </html>
     

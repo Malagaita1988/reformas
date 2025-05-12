@@ -5,12 +5,11 @@
     --color-secondary: #e67e22;
     --color-accent: #3498db;
     --color-light: #f5f5f5;
-    --color-white: #ffffff;
+    --color-white: #fff;
     --color-dark: #333;
     --color-gray: #777;
     --color-success: #27ae60;
     --color-error: #e74c3c;
-    
     --font-primary: 'Montserrat', sans-serif;
     --font-secondary: 'Lora', serif;
     
@@ -27,10 +26,10 @@
     --border-radius-medium: 8px;
     --border-radius-md: 8px;
     --border-radius-lg: 16px;
-    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    --box-shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.15);
-    --shadow-small: 0 5px 15px rgba(0, 0, 0, 0.08);
-    --shadow-medium: 0 10px 25px rgba(0, 0, 0, 0.12);
+    --box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+    --box-shadow-hover: 0 15px 35px rgb(0 0 0 / 15%);
+    --shadow-small: 0 5px 15px rgb(0 0 0 / 8%);
+    --shadow-medium: 0 10px 25px rgb(0 0 0 / 12%);
     
     /* Transiciones */
     --transition-fast: 0.3s ease;
@@ -174,22 +173,24 @@ a:hover {
     justify-content: center;
     overflow: hidden;
 }
+
 .servicios-hero .hero-bg {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient( rgba(44,62,80,0.45), rgba(44,62,80,0.25)), url('../assets/img/hero_serevicios.png') center center / cover no-repeat;
+    background: linear-gradient( rgb(44 62 80 / 45%), rgb(44 62 80 / 25%)), url('../assets/img/hero_serevicios.png') center center / cover no-repeat;
     z-index: 1;
 }
+
 .nosotros-hero .hero-bg {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient( rgba(44,62,80,0.55), rgba(44,62,80,0.35)), url('/assets/img/hero_nosotros.png') center center / cover no-repeat;
+    background: linear-gradient( rgb(44 62 80 / 55%), rgb(44 62 80 / 35%)), url('../assets/img/hero_nosotros.png') center center / cover no-repeat;
     background-color: #2c3e50;
     z-index: 1;
     transition: background-position 0.3s;
 }
 
-@media (max-width: 700px) {
+@media (width <= 700px) {
     .nosotros-hero {
         min-height: 180px;
         max-height: 260px;
@@ -197,12 +198,14 @@ a:hover {
         display: flex;
         position: relative;
     }
+
     .nosotros-hero .hero-bg {
         background-position: center 30%;
         background-size: cover;
         min-height: 180px;
         max-height: 260px;
     }
+
     .nosotros-hero .hero-content {
     position: absolute;
     top: 0; left: 0;
@@ -216,8 +219,8 @@ a:hover {
     padding: 0 1rem;
     margin: 0;
     text-align: center;
-    pointer-events: none;
 }
+
 .nosotros-hero .hero-content > * {
     pointer-events: auto;
 }
@@ -242,11 +245,11 @@ a:hover {
 }
 
 .servicios-hero .hero-bg {
-    background: linear-gradient(rgba(44,62,80,0.45), rgba(44,62,80,0.25)), url('/assets/img/hero_serevicios.png') center center / cover no-repeat;
+    background: linear-gradient(rgb(44 62 80 / 45%), rgb(44 62 80 / 25%)), url('../assets/img/hero_serevicios.png') center center / cover no-repeat;
 }
 
 .nosotros-hero .hero-bg {
-    background: linear-gradient(rgba(44,62,80,0.55), rgba(44,62,80,0.35)), url('/assets/img/hero_nosotros.png') center center / cover no-repeat;
+    background: linear-gradient(rgb(44 62 80 / 55%), rgb(44 62 80 / 35%)), url('../assets/img/hero_nosotros.png') center center / cover no-repeat;
     background-color: #2c3e50;
 }
 
@@ -262,17 +265,17 @@ a:hover {
 .servicios-hero h1, .nosotros-hero h1 {
     font-size: 3.2rem;
     color: #fff;
-    text-shadow: 0 2px 12px rgba(44,62,80,0.35);
+    text-shadow: 0 2px 12px rgb(44 62 80 / 35%);
     margin-bottom: 1rem;
 }
 
 .servicios-hero p, .nosotros-hero p {
     font-size: 1.5rem;
     color: #fff;
-    text-shadow: 0 1px 8px rgba(44,62,80,0.25);
+    text-shadow: 0 1px 8px rgb(44 62 80 / 25%);
 }
 
-@media (max-width: 700px) {
+@media (width <= 700px) {
     .servicios-hero, .nosotros-hero {
         min-height: 220px;
         max-height: 300px;
@@ -305,25 +308,30 @@ a:hover {
     width: 100%;
     padding: 3rem 1rem;
 }
+
 .servicios-hero h1 {
     font-size: 3.2rem;
     color: #fff;
-    text-shadow: 0 2px 12px rgba(44,62,80,0.35);
+    text-shadow: 0 2px 12px rgb(44 62 80 / 35%);
 }
+
 .servicios-hero p {
     font-size: 1.5rem;
     color: #fff;
-    text-shadow: 0 1px 8px rgba(44,62,80,0.25);
+    text-shadow: 0 1px 8px rgb(44 62 80 / 25%);
     margin-top: 1.2rem;
 }
-@media (max-width: 700px) {
+
+@media (width <= 700px) {
     .servicios-hero {
         min-height: 180px;
         max-height: 260px;
     }
+
     .servicios-hero h1 {
         font-size: 2.1rem;
     }
+
     .servicios-hero p {
         font-size: 1.1rem;
     }
@@ -336,8 +344,8 @@ a:hover {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgb(255 255 255 / 95%);
+    box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
     transition: all var(--transition-fast);
 }
 
@@ -453,7 +461,7 @@ a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgb(0 0 0 / 50%);
 }
 
 .hero-content {
@@ -467,7 +475,7 @@ a:hover {
     font-size: 5.6rem;
     margin-bottom: var(--spacing-md);
     color: var(--color-white);
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 10px rgb(0 0 0 / 30%);
     animation: fadeInDown 1s ease-out;
 }
 
@@ -484,34 +492,45 @@ a:hover {
     animation-fill-mode: both;
 }
 
-/* Se han eliminado duplicidades de:
-   - .footer, .footer-col, .footer-grid (migradas a footer.css)
-   - .form-title, .form-group, .form-icon (migradas a calculator.css)
-   - .chatbot-container, .chatbot-header, .chatbot-message, .chatbot-input, .chatbot-close (migradas a components.css)
-   - Reglas de grid/flex de secciones específicas (migradas a sus respectivos archivos)
-   - Media queries repetidas (solo quedan las globales aquí)
-*/
 
 /* Ejemplo de utilidades globales (mantener o añadir según uso real): */
 .hide {
   display: none !important;
 }
+
+/**************************************
+* Helpers y utilidades fusionados de components.css
+**************************************/
+.hide {
+  display: none !important;
+}
+
 .show {
   display: block !important;
 }
+
 .text-center {
   text-align: center !important;
 }
+
 .mt-2 {
   margin-top: 2rem;
 }
+
 .mb-2 {
   margin-bottom: 2rem;
 }
 
-/* Añade aquí solo helpers y estilos globales que no pertenezcan a ningún componente/sección específica. */
+/**************************************/
 
-/* Si necesitas añadir una regla global nueva, hazlo aquí. */
+
+/* Los estilos de contacto se han movido a contacto.css */
+
+/* Los estilos responsivos de contacto se han movido a contacto.css */
+
+/**************************************
+* SECCIONES GENERALES
+**************************************/
 .section {
     padding: var(--spacing-xl) 0;
 }
@@ -571,6 +590,65 @@ a:hover {
 .about-text {
     flex: 1;
 }
+
+/**************************************
+* COMPONENTS.CSS FUSIONADO ( CTA)
+***************************************/
+
+/* CTA Section (fusionado, global) */
+.cta-section {
+    position: relative;
+    padding: 5rem 0;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 70%);
+    z-index: 1;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-content .btn {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+}
+
+/* Helpers globales */
+.section.bg-light {
+    background-color: var(--color-light);
+}
+
+/* Solo fusionar helpers y CTA, el resto de reglas de chatbot avanzadas quedan en chatbot.css o donde corresponda */
+
+/*************************************  */
 
 /* Servicios */
 .services-grid {
@@ -674,23 +752,6 @@ a:hover {
     object-position: center;
     border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
 }
-/* Testimonios */
-.testimonials {
-    background-color: var(--color-light);
-}
-
-.testimonial-slider {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.testimonial-item {
-    background-color: var(--color-white);
-    border-radius: var(--border-radius-md);
-}
-
-/* Los estilos de testimonios se han movido al archivo testimonials.css */
 
 /* Contacto */
 .contact-container {
@@ -716,55 +777,14 @@ a:hover {
     color: var(--color-accent);
 }
 
-.contact-form {
-    display: grid;
-    gap: var(--spacing-sm);
-}
+/* Los estilos del formulario de contacto se han movido a contacto.css */
 
-.form-group {
-    margin-bottom: var(--spacing-sm);
-}
-
-.form-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 500;
-}
-
-.form-control {
-    width: 100%;
-    padding: 1.2rem;
-    border: 1px solid #ddd;
-    border-radius: var(--border-radius-sm);
-    font-family: var(--font-primary);
-    font-size: 1.6rem;
-    transition: border-color var(--transition-fast);
-}
-
-.form-control:focus {
-    outline: none;
-    border-color: var(--color-primary);
-}
-
-textarea.form-control {
-    min-height: 150px;
-    resize: vertical;
-}
-
-/* Footer */
-/* Nota: Los estilos detallados del footer se encuentran en footer.css */
-/* Aquí solo se mantiene la referencia básica para compatibilidad */
 .footer {
     background-color: var(--color-dark);
     color: var(--color-light);
     padding: var(--spacing-lg) 0 var(--spacing-md);
 }
 
-/* Los estilos específicos del footer han sido migrados a footer.css */
-
-/* Los estilos de legal-links, newsletter-form, social-links y footer-bottom han sido migrados a footer.css */
-
-/* Animaciones */
 
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -776,6 +796,7 @@ textarea.form-control {
         transform: translateY(30px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
@@ -783,7 +804,7 @@ textarea.form-control {
 }
 
 /* Responsive */
-@media (max-width: 992px) {
+@media (width <= 992px) {
     html {
         font-size: 60%;
     }
@@ -797,7 +818,7 @@ textarea.form-control {
     }
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
     html {
         font-size: 55%;
     }
@@ -824,7 +845,7 @@ textarea.form-control {
         flex-direction: column;
         align-items: center;
         padding: var(--spacing-md) 0;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
         transform: translateY(-100%);
         opacity: 0;
         visibility: hidden;
@@ -850,7 +871,7 @@ textarea.form-control {
     }
 }
 
-@media (max-width: 576px) {
+@media (width <= 576px) {
     .section {
         padding: var(--spacing-lg) 0;
     }

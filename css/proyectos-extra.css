@@ -1,11 +1,38 @@
-/**
- * Estilos específicos para la página de proyectos
- * Incluye estilos para filtros, tarjetas de proyectos y paginación
- */
+
+
+/* Carrusel de proyectos para index */
+.projects-carousel {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.projects-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.projects-carousel .project-card {
+    min-width: 340px;
+    max-width: 370px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    margin-bottom: 0;
+}
+
+@media (width <= 600px) {
+    .projects-carousel .project-card {
+        min-width: 90vw;
+        max-width: 95vw;
+    }
+}
+
 
 /* Hero específico de proyectos */
 .proyectos-hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/img/projects/hero_proyectos.png');
+    background-image: linear-gradient(rgb(0 0 0 / 60%), rgb(0 0 0 / 60%)), url('../assets/img/projects/hero_proyectos.png');
     background-position: center;
     background-size: cover;
 }
@@ -36,21 +63,24 @@
     background-color: var(--color-primary-light);
     color: var(--color-primary);
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
 }
 
 .filter-btn.active {
     background-color: var(--color-primary);
     color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 10px rgb(0 0 0 / 15%);
 }
 
-/* Tarjetas de proyectos mejoradas */
+
 .project-card {
+    position: relative;
+    width: 100%;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.4s ease;
+    background-color: var(--color-white);
+    box-shadow: 0 5px 20px rgb(0 0 0 / 8%);
     opacity: 0;
     transform: translateY(30px);
 }
@@ -62,11 +92,14 @@
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 25px rgb(0 0 0 / 15%);
 }
 
 .project-info {
     padding: 1.5rem;
+    text-align: center;
+    background: linear-gradient(to bottom, rgb(255 255 255 / 95%), #fff);
+    border-top: 1px solid rgb(0 0 0 / 5%);
 }
 
 .project-category {
@@ -80,20 +113,27 @@
 }
 
 .project-info h3 {
+    font-family: Montserrat, sans-serif;
     margin: 0.5rem 0;
-    font-size: 1.3rem;
-    color: var(--color-dark);
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
 }
 
 .project-info p {
+    font-family: Lora, serif;
     color: var(--color-text);
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
     line-height: 1.6;
+    opacity: 0.9;
 }
 
 .btn-outline {
     display: inline-block;
-    padding: 0.6rem 1.2rem;
+    padding: 0.8rem 1.5rem;
     border: 2px solid var(--color-primary);
     color: var(--color-primary);
     border-radius: 30px;
@@ -103,10 +143,38 @@
 }
 
 .btn-outline:hover {
-    background-color: var(--color-primary);
-    color: white;
+    background: var(--color-primary);
+    color: var(--color-white);
     transform: translateY(-2px);
 }
+
+@media (width >= 768px) {
+    .project-info {
+        padding: 2.5rem;
+    }
+
+    .project-info h3 {
+        font-size: 1.75rem;
+    }
+
+    .project-info p {
+        font-size: 1.1rem;
+    }
+}
+
+.projects-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    padding: 0.5rem;
+}
+
+.projects-cta .btn-primary {
+    min-width: 200px;
+    text-align: center;
+}
+
+/* --- FIN estilos combinados --- */
 
 /* Paginación */
 .pagination {
@@ -134,9 +202,9 @@
 }
 
 .pagination a:hover {
-    background-color: var(--color-primary-light);
+    background-color: var(--color-primary);
     color: white;
-    border-color: var(--color-primary-light);
+    border-color: var(--color-primary);
 }
 
 .pagination span.current {
@@ -156,7 +224,7 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (width <= 768px) {
     .project-filters {
         gap: 0.5rem;
     }
